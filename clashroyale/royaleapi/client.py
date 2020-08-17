@@ -1,6 +1,7 @@
 import asyncio
 import logging
 import json
+import sys
 from datetime import datetime
 from time import time
 from urllib.parse import urlencode
@@ -67,7 +68,8 @@ class Client:
         self.camel_case = options.get('camel_case', False)
         self.headers = {
             'Authorization': 'Bearer {}'.format(token),
-            'User-Agent': 'python-clashroyale-client (fourjr/kyb3r) ' + options.get('user_agent', '')
+            'User-Agent': 'rf0x3d/python-clashroyale-client (Python {1[0]}.{1[1]}) '.format(sys.version_info) + options.get('user_agent', ''),
+            'Accept-Encoding': 'gzip'
         }
         self.cache_fp = options.get('cache_fp')
         self.using_cache = bool(self.cache_fp)

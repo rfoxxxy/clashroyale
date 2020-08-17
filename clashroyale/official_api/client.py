@@ -614,8 +614,7 @@ class Client:
         """
         deck_link = 'https://link.clashroyale.com/deck/en?deck='
 
-        for i in deck:
-            card = self.get_card_info(i.name)
+        for card in deck:
             deck_link += '{0.id};'.format(card)
 
         return deck_link

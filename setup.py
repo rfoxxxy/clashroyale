@@ -2,7 +2,7 @@ import json
 import urllib.request
 from setuptools import setup, find_packages
 
-with open('README.rst', encoding='utf8') as f:
+with open('README.md', encoding='utf8') as f:
     long_description = f.read()
 
 setup(

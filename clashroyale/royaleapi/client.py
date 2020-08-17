@@ -68,7 +68,7 @@ class Client:
         self.camel_case = options.get('camel_case', False)
         self.headers = {
             'Authorization': 'Bearer {}'.format(token),
-            'User-Agent': 'rf0x3d/python-clashroyale-client (Python {1[0]}.{1[1]}) '.format(sys.version_info) + options.get('user_agent', ''),
+            'User-Agent': 'rf0x3d/python-clashroyale-client (Python {0[0]}.{0[1]}) '.format(sys.version_info) + options.get('user_agent', ''),
             'Accept-Encoding': 'gzip'
         }
         self.cache_fp = options.get('cache_fp')
